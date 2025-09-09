@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Titan One", sans-serif;
+    font-style: normal;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem;
+    align-items: center;
+    margin: 50px;
+}
+
+header h1{
+    color: rgb(0, 160, 147);
+    font-size: 46px;
+}
+
+header input{
+    width: 60rem;
+    height: 42px;
+    border-radius: 20px;
+    text-align: center;
+    border: 0.5px solid black;
+}
+
+header button{
+    height: 46px;
+    width: 200px;
+    border-radius: 24px;
+    background-color: rgb(0, 160, 147);
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-family: "Titan One";
+    font-style: oblique;
+}
