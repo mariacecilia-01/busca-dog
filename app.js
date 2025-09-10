@@ -1,20 +1,25 @@
 'use strict'
 
 async function buscarImagens() {
-    const url = `https://dog.ceo/api/breed/images`
-    const response = await fetch (url)
+    const input = document.getElementById('input').value 
+    const url = `https://dog.ceo/api/breed/${input}/images`
+
+    const response = await fetch(url)
     const imagens = await response.json()
-
-    const container = document.getElementById('container')
     
-    const div = document.createElement('div')
-    const imagem = document.createElement('img')
+    const container = document.getElementById('container')
+    container.innerHTML = ''
+    
 
-    imagem.src = url
+    imagens.message.forEach(urlImagem => {
+        const imagem = document.createElement('img')
+        imagem.src = urlImagem
+        container.appendChild(imagem)
 
-    div.appendChild(imagem)
-
-
+    })
 }
 
-buscarImagens('beagle')
+const button = document.getElementById('button')
+button.addEventListener('click', buscarImagens)
+
+carregarImagens()
